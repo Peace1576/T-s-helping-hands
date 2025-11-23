@@ -1,26 +1,22 @@
-/*
-  Basic interactivity for the booking form. The script attaches a submit
-  handler to the booking form to perform client‑side validation and display
-  feedback without leaving the page. The form data is not actually sent
-  anywhere; instead, it simulates a successful booking and resets the form.
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('booking-form');
   const responseEl = document.getElementById('form-response');
-  // Maximum number of bookings allowed per day (client‑side check)
+
+  // Local check (optional – can disable if backend handles limits)
   const MAX_BOOKINGS_PER_DAY = 3;
-  // Google Apps Script Web App URL for handling bookings. Submissions from the
-  // booking form will be sent to this URL and logged into your connected
-  // Google Sheet via your Apps Script deployment.
-  const sheetScriptURL = 'https://script.google.com/macros/s/AKfycby_kZK0KV04BYTu4WrYUL5EvfQ2Qu4lWU_NQbyImJwXdWguTnrxKFyAhhzrULHTOEnI_w/exec';
+
+  // Your Google Apps Script Web App URL
+  const sheetScriptURL =
+    'https://script.google.com/macros/s/AKfycby_kZK0KV04BYTu4WrYUL5EvfQ2Qu4lWU_NQbyImJwXdWguTnrxKFyAhhzrULHTOEnI_w/exec';
 
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // Basic validation: ensure all required fields have a value
+
+      // Required field validation
       const requiredFields = form.querySelectorAll('[required]');
       let valid = true;
+
       requiredFields.forEach((field) => {
         if (!field.value.trim()) {
           valid = false;
@@ -29,19 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
           field.classList.remove('error');
         }
       });
+
       if (!valid) {
         responseEl.textContent =
           'Please complete all required fields before submitting.';
         responseEl.style.color = '#c0392b';
         return;
       }
-      // Check localStorage for bookings on the selected date
-      const dateField = form.querySelector('#date');
-      const bookingDate = dateField.value;
+
+      // Local date limit check (optional)
+      const bookingDate = form.querySelector('#date').value;
       if (bookingDate) {
         const stored = localStorage.getItem('ts_helping_hands_bookings');
         let bookings = stored ? JSON.parse(stored) : {};
         const countForDate = bookings[bookingDate] || 0;
+
         if (countForDate >= MAX_BOOKINGS_PER_DAY) {
           responseEl.style.color = '#c0392b';
           responseEl.textContent =
@@ -49,13 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
           responseEl.scrollIntoView({ behavior: 'smooth' });
           return;
         }
-        // Otherwise increment booking count locally
+
         bookings[bookingDate] = countForDate + 1;
         localStorage.setItem(
           'ts_helping_hands_bookings',
           JSON.stringify(bookings)
         );
       }
+
       // Collect form data
       const formData = {
         name: form.querySelector('#name').value.trim(),
@@ -65,32 +64,41 @@ document.addEventListener('DOMContentLoaded', () => {
         service: form.querySelector('#service').value,
         date: form.querySelector('#date').value,
         time: form.querySelector('#time').value,
-        details: form.querySelector('#details').value.trim(),
+
+        // FIXED: backend expects "notes", not "details"
+        notes: form.querySelector('#details').value.trim(),
       };
-      // Attempt to send data to Google Sheets script if URL is configured
+
+      // Send to Google Sheets backend
       try {
-        if (sheetScriptURL && sheetScriptURL !== 'YOUR_GOOGLE_SHEETS_SCRIPT_URL') {
-          await fetch(sheetScriptURL, {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-          });
+        const req = await fetch(sheetScriptURL, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await req.json();
+
+        if (result.ok) {
+          responseEl.style.color = '#3b6f44';
+          responseEl.textContent = result.message;
+        } else {
+          responseEl.style.color = '#c0392b';
+          responseEl.textContent = result.message;
         }
-        responseEl.style.color = '#3b6f44';
-        responseEl.textContent =
-          'Thank you! Your booking request has been received. We will email you a confirmation within 24 hours.';
-        form.reset();
       } catch (err) {
-        // If sending fails, still show success but mention offline
-        responseEl.style.color = '#3b6f44';
+        responseEl.style.color = '#c0392b';
         responseEl.textContent =
-          'Thank you! Your booking request has been received. We will contact you within 24 hours.';
-        form.reset();
+          'Network error. Please try again later.';
       }
+
+      form.reset();
       responseEl.scrollIntoView({ behavior: 'smooth' });
     });
   }
+});
+
 });

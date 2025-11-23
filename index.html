@@ -14,14 +14,7 @@
     -->
     <!-- Use root-relative paths for assets when deploying to GitHub Pages -->
     <link rel="stylesheet" href="style.css" />
-    <!-- Include Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-+MUZU1uaP2QnwvG/WDlsqAoC+IoxV+paWYR7gopmXbVU2EhhKvjMA8lzslJ+1bPaXqr2Sv0mIGgfU415YUdgDw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- Icons are provided locally rather than via external CDNs -->
   </head>
   <body>
     <!-- Hero section with logo, tagline and primary call‑to‑action -->
@@ -48,15 +41,17 @@
       <h2 class="section-title">Our Services</h2>
       <div class="services-grid">
         <div class="service-card">
-          <i class="fa-solid fa-seedling service-icon" aria-hidden="true"></i>
-          <h3>Landscaping & Yard Cleaning</h3>
+          <!-- Local icon for landscaping & yard cleaning -->
+          <img src="icon-yard.png" alt="Landscaping & Yard Cleaning icon" class="service-icon-img" />
+          <h3>Landscaping &amp; Yard Cleaning</h3>
           <p>
             From mowing lawns and trimming shrubs to general garden
             maintenance, we keep your yard looking pristine.
           </p>
         </div>
         <div class="service-card">
-          <i class="fa-solid fa-couch service-icon" aria-hidden="true"></i>
+          <!-- Local icon for furniture assembly -->
+          <img src="icon-furniture.png" alt="Furniture Assembly icon" class="service-icon-img" />
           <h3>Furniture Assembly</h3>
           <p>
             Flat‑pack, shelving or complex pieces – we assemble your
@@ -64,7 +59,8 @@
           </p>
         </div>
         <div class="service-card">
-          <i class="fa-solid fa-hands-holding-circle service-icon" aria-hidden="true"></i>
+          <!-- Local icon for general help -->
+          <img src="icon-help.png" alt="General Help icon" class="service-icon-img" />
           <h3>General Help</h3>
           <p>
             Need an extra pair of hands? We assist with odd jobs around
@@ -85,6 +81,7 @@
       </p>
       <div class="pricing-grid">
         <div class="pricing-card">
+          <img src="icon-furniture.png" alt="Furniture Assembly icon" class="pricing-icon" />
           <h3>Furniture Assembly</h3>
           <ul>
             <li><strong>Small items ($20–$30)</strong>: Nightstands, side tables,
@@ -104,6 +101,7 @@
           </ul>
         </div>
         <div class="pricing-card">
+          <img src="icon-yard.png" alt="Landscaping & Yard Cleaning icon" class="pricing-icon" />
           <h3>Landscaping &amp; Yard Cleaning</h3>
           <ul>
             <li><strong>Basic yard clean‑up ($40–$80)</strong>: Light trimming,
@@ -127,6 +125,7 @@
           </ul>
         </div>
         <div class="pricing-card">
+          <img src="icon-help.png" alt="General Help icon" class="pricing-icon" />
           <h3>General Help</h3>
           <p>
             General help tasks are billed at <strong>$30–$50 per hour</strong>
@@ -176,7 +175,7 @@
         <div class="why-card">
           <h3>Local Expertise & Trust</h3>
           <p>
-            As a Tucson‑based business, we know the local climate and
+            As a Phoenix‑based business, we know the local climate and
             community well. Our reputation is built on trust and reliability –
             we treat every home like our own and show up when we say we will.
           </p>
@@ -212,7 +211,7 @@
           <h2 class="section-title">About Us</h2>
           <p>
             T's Helping Hands Service is a locally‑owned business based in
-            Tucson, Arizona. We proudly serve our neighbours in Tucson and
+            Phoenix, Arizona. We proudly serve our neighbours in Phoenix and
             the surrounding area. Our mission is to provide reliable,
             high‑quality assistance for homeowners and renters who don’t have
             the time or tools to handle everything themselves. From maintaining
@@ -296,7 +295,7 @@
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2025 T's Helping Hands Service. All rights reserved.</p>
-        <p>Serving Tucson, Arizona and surrounding communities.</p>
+        <p>Serving Phoenix, Arizona and surrounding communities.</p>
         <p>
           <img src="instagram.png" alt="Instagram" class="social-icon" />
           @ts_helping_hands2

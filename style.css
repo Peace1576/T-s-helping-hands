@@ -172,6 +172,21 @@ img {
   color: var(--accent-color);
 }
 
+/* New icon styles: sizing and spacing for service and pricing icons */
+.service-icon-img {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.pricing-icon {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
 /* How It Works */
 .how-grid {
   display: flex;

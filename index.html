@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T's Helping Hands Service</title>
+    <!--
+      The website uses a custom stylesheet (css/style.css) for layout and styling
+      and a small script (js/script.js) for basic form validation and page
+      interactions. The colours and typography are derived from the provided
+      logos to create a cohesive brand identity.
+    -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Include Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-+MUZU1uaP2QnwvG/WDlsqAoC+IoxV+paWYR7gopmXbVU2EhhKvjMA8lzslJ+1bPaXqr2Sv0mIGgfU415YUdgDw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Hero section with logo, tagline and primary call‑to‑action -->
+    <header class="hero">
+      <div class="hero-content">
+        <img
+          src="images/logo-service.png"
+          alt="T's Helping Hands Service Logo"
+          class="hero-logo"
+        />
+        <h1 class="hero-title">T's Helping Hands Service</h1>
+        <p class="hero-tagline">
+          Your local partner for landscaping, furniture assembly and general
+          help.
+        </p>
+        <a href="#booking" class="cta-button">Book Now</a>
+      </div>
+    </header>
+
+    <!-- Services section: list the core offerings clearly -->
+    <section id="services" class="services section">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-seedling service-icon" aria-hidden="true"></i>
+          <h3>Landscaping & Yard Cleaning</h3>
+          <p>
+            From mowing lawns and trimming shrubs to general garden
+            maintenance, we keep your yard looking pristine.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-couch service-icon" aria-hidden="true"></i>
+          <h3>Furniture Assembly</h3>
+          <p>
+            Flat‑pack, shelving or complex pieces – we assemble your
+            furniture quickly and safely so you don’t have to.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-hands-holding-circle service-icon" aria-hidden="true"></i>
+          <h3>General Help</h3>
+          <p>
+            Need an extra pair of hands? We assist with odd jobs around
+            the house or office to make your day easier.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing section: outline service costs -->
+    <section id="pricing" class="pricing section">
+      <h2 class="section-title">Pricing</h2>
+      <p class="pricing-intro">
+        Transparent pricing helps you plan ahead. Below you’ll find price ranges
+        for our most popular services. Final quotes may vary based on the
+        specifics of your project. For large or unique jobs, please contact us
+        for a custom estimate.
+      </p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Furniture Assembly</h3>
+          <ul>
+            <li><strong>Small items ($20–$30)</strong>: Nightstands, side tables,
+            small stools, small shelves</li>
+            <li><strong>Medium items ($35–$60)</strong>: Desks, TV stands,
+            office chairs, 3–5 tier shelving units</li>
+            <li><strong>Large items ($70–$120)</strong>: Dressers, bed
+            frames, cabinets, large closets/complex shelves</li>
+            <li><strong>Extra services</strong>:
+              <ul>
+                <li>Same‑day service: +$10</li>
+                <li>Furniture anchoring (anti‑tip): $10 per item</li>
+                <li>Packaging removal: $5–$15</li>
+                <li>Multi‑item discount: bundle 3+ pieces and get 10% off</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <h3>Landscaping &amp; Yard Cleaning</h3>
+          <ul>
+            <li><strong>Basic yard clean‑up ($40–$80)</strong>: Light trimming,
+            collecting leaves, picking up debris, bagging trash (price
+            depends on yard size and amount of trash)</li>
+            <li><strong>Bush trimming ($20–$40 per bush)</strong>: Shape
+            &amp; remove waste</li>
+            <li><strong>Weed removal ($30–$60)</strong>: Hand‑pull or cut;
+            bagging included</li>
+            <li><strong>Rock raking/levelling ($40–$100)</strong>: Even out
+            gravel, clear debris, touch‑up edges</li>
+            <li><strong>Front yard refresh ($60–$120)</strong>: Clean up,
+            weed removal, light trimming, rock raking</li>
+            <li><strong>Add‑ons</strong>:
+              <ul>
+                <li>Extra trash bags: $3 each</li>
+                <li>Haul‑away of yard waste: $15–$40</li>
+                <li>Same‑day service: +$10</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="pricing-card">
+          <h3>General Help</h3>
+          <p>
+            General help tasks are billed at <strong>$30–$50 per hour</strong>
+            depending on the complexity and materials required. From minor home
+            repairs to hauling and organising, we’re here to lend a hand. Contact us
+            for a tailored quote.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works section: explain the simple booking process -->
+    <section id="how" class="how section">
+      <h2 class="section-title">How It Works</h2>
+      <div class="how-grid">
+        <div class="how-card">
+          <span class="how-number">1</span>
+          <h3>Choose a Service</h3>
+          <p>
+            Select the type of help you need from our list of services – yard
+            care, furniture assembly or general assistance.
+          </p>
+        </div>
+        <div class="how-card">
+          <span class="how-number">2</span>
+          <h3>Book a Time</h3>
+          <p>
+            Pick a date and time that works for you using our booking form
+            below. We’ll confirm your request promptly.
+          </p>
+        </div>
+        <div class="how-card">
+          <span class="how-number">3</span>
+          <h3>We Get It Done</h3>
+          <p>
+            Relax while we tackle your to‑do list. We arrive on time,
+            prepared to complete the work efficiently and neatly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section: a brief introduction -->
+    <section id="about" class="about section">
+      <div class="about-content">
+        <img
+          src="images/logo.png"
+          alt="T's Helping Hands logo"
+          class="about-logo"
+        />
+        <div class="about-text">
+          <h2 class="section-title">About Us</h2>
+          <p>
+            T's Helping Hands Service is a locally‑owned business based in
+            Phoenix, Arizona. Our mission is to provide reliable, high‑quality
+            assistance for homeowners and renters who don’t have the time or
+            tools to handle everything themselves. From maintaining beautiful
+            lawns to putting together furniture and tackling miscellaneous
+            projects, we bring energy and expertise to every job.
+          </p>
+          <p>
+            We are passionate about delivering friendly, trustworthy service and
+            building long‑term relationships with our clients. When you invite
+            us into your home or yard, we treat it with the same care and
+            respect we would our own.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking section: capture appointment requests -->
+    <section id="booking" class="booking section">
+      <h2 class="section-title">Book Your Service</h2>
+      <p class="booking-intro">
+        Ready to schedule? Please fill out the form below and we’ll get back to
+        you within 24&nbsp;hours to confirm your appointment. Required fields are
+        marked with an asterisk (*).
+      </p>
+      <form id="booking-form" class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9\-\+\s\(\)]{7,20}"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Address*</label>
+            <input type="text" id="address" name="address" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service*</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="yard">Landscaping &amp; Yard Cleaning</option>
+              <option value="furniture">Furniture Assembly</option>
+              <option value="general">General Help</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Preferred Date*</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred Time*</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="details">Additional Details</label>
+          <textarea id="details" name="details" rows="4"></textarea>
+        </div>
+        <button type="submit" class="cta-button submit-button">Submit Booking</button>
+      </form>
+      <p id="form-response" class="form-response" aria-live="polite"></p>
+    </section>
+
+    <!-- Footer with contact information -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 T's Helping Hands Service. All rights reserved.</p>
+        <p>Serving Phoenix, Arizona and surrounding communities.</p>
+        <p>
+          <i class="fa-solid fa-phone"></i> (555) 123‑4567
+          &nbsp;|&nbsp;
+          <i class="fa-solid fa-envelope"></i> info@tshelpinghands.com
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

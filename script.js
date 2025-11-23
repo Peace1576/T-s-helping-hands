@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const responseEl = document.getElementById('form-response');
   // Maximum number of bookings allowed per day (client‑side check)
   const MAX_BOOKINGS_PER_DAY = 3;
-  // Placeholder for Google Sheets script URL. Replace with your Apps Script URL
-  const sheetScriptURL = 'YOUR_GOOGLE_SHEETS_SCRIPT_URL';
+  // Google Apps Script Web App URL for handling bookings. Submissions from the
+  // booking form will be sent to this URL and logged into your connected
+  // Google Sheet via your Apps Script deployment.
+  const sheetScriptURL = 'https://script.google.com/macros/s/AKfycbxia4RXqmo88fRwAqO1JCfsjCGGIfZ317TB0Z5ftfCIkrgsLunaflvV5OinYej6EzoP/exec';
 
   if (form) {
     form.addEventListener('submit', async (e) => {

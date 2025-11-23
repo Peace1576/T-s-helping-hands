@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>T's Helping Hands Service</title>
+    <!-- Import Google Font Poppins for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <!--
       The website uses a custom stylesheet (css/style.css) for layout and styling
       and a small script (js/script.js) for basic form validation and page
       interactions. The colours and typography are derived from the provided
       logos to create a cohesive brand identity.
     -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Use root-relative paths for assets when deploying to GitHub Pages -->
+    <link rel="stylesheet" href="style.css" />
     <!-- Include Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -25,12 +28,14 @@
     <header class="hero">
       <div class="hero-content">
         <img
-          src="images/logo-service.png"
+          src="logo-service.png"
           alt="T's Helping Hands Service Logo"
           class="hero-logo"
         />
-        <h1 class="hero-title">T's Helping Hands Service</h1>
-        <p class="hero-tagline">
+        <!-- The hero heading and tagline use inline styles to ensure contrast
+             against the illustrated background -->
+        <h1 class="hero-title" style="color:#ffffff;">T's Helping Hands Service</h1>
+        <p class="hero-tagline" style="color:#e0e0e0;">
           Your local partner for landscaping, furniture assembly and general
           help.
         </p>
@@ -168,7 +173,7 @@
     <section id="about" class="about section">
       <div class="about-content">
         <img
-          src="images/logo.png"
+          src="logo.png"
           alt="T's Helping Hands logo"
           class="about-logo"
         />
@@ -268,6 +273,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

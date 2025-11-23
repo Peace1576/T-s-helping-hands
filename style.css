@@ -403,6 +403,49 @@ img {
   font-size: 0.9rem;
 }
 
+/* Why Choose Us section */
+.why {
+  background-color: var(--light-grey);
+}
+
+.why-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.why-card {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  padding: 1.5rem;
+  flex: 1 1 280px;
+  max-width: 350px;
+}
+
+.why-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Social icon for footer */
+.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .service-card,

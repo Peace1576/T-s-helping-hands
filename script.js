@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Google Apps Script Web App URL for handling bookings. Submissions from the
   // booking form will be sent to this URL and logged into your connected
   // Google Sheet via your Apps Script deployment.
-  const sheetScriptURL = 'https://script.google.com/macros/s/AKfycbxia4RXqmo88fRwAqO1JCfsjCGGIfZ317TB0Z5ftfCIkrgsLunaflvV5OinYej6EzoP/exec';
+  const sheetScriptURL = 'https://script.google.com/macros/s/AKfycby_kZK0KV04BYTu4WrYUL5EvfQ2Qu4lWU_NQbyImJwXdWguTnrxKFyAhhzrULHTOEnI_w/exec';
 
   if (form) {
     form.addEventListener('submit', async (e) => {
